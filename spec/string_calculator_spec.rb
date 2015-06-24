@@ -7,8 +7,19 @@ require 'string_calculator'
 # More examples of tests can be found here: https://github.com/rspec/rspec-expectations
 RSpec.describe StringCalculator, "#add" do
 
-  it "returns 0 for empty string" do
-    expect(StringCalculator.add("")).to eql(0)
+  context "null value" do
+    it "returns 0 for empty string" do
+      expect(StringCalculator.add("")).to eql(0)
+    end
+  end
+
+  context "single value" do
+    it "returns 0 for empty string" do
+      expect(StringCalculator.add("0")).to eql(0)
+    end
+    it "returns 5 for empty string" do
+      expect(StringCalculator.add("5")).to eql(5)
+    end
   end
 
   # more tests go here
