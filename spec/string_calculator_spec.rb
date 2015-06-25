@@ -14,10 +14,10 @@ RSpec.describe StringCalculator, "#add" do
   end
 
   context "single value" do
-    it "returns 0 for empty string" do
+    it "returns 0 for single value" do
       expect(StringCalculator.add("0")).to eql(0)
     end
-    it "returns 5 for empty string" do
+    it "returns 5 for single value" do
       expect(StringCalculator.add("5")).to eql(5)
     end
   end
